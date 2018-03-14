@@ -9,7 +9,7 @@ app.use(favicon(path.join(__dirname + '/ftlogo.ico')));
 
 var mysql = require('mysql');
 var con = mysql.createConnection({
-     host: "fm1kmj213vbn10k.c1rovcfhsccw.eu-west-2.rds.amazonaws.com",
+     host: "fm14lbfikbj76n6.c1rovcfhsccw.eu-west-2.rds.amazonaws.com",
      user: "dbadmin",
      password: "password",
      database: "ftratings"
@@ -32,7 +32,7 @@ app.post('/submit',function(req,res){
     ip = ip.substr(7)
   }
 
-  var sql = "INSERT INTO ratings(ipaddress,rating) VALUES ('"+ip+"', '"+subject+"')";
+  var sql = "INSERT INTO rating(ipaddress,rating) VALUES ('"+ip+"', '"+subject+"')";
 
   con.query(sql, function (err, result) {
 
