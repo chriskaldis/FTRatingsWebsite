@@ -1,0 +1,8 @@
+.o-buttons--primary.o-buttons--inverse {
+    width: 150px;
+    margin: 40px auto 0 auto;
+    border-color: black;
+}
+form {
+    display: flex;
+}
