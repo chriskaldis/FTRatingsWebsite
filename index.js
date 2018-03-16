@@ -9,7 +9,7 @@ app.use(favicon(path.join(__dirname + '/ftlogo.ico')));
 
 var mysql = require('mysql');
 var con = mysql.createConnection({
-     host: "fm1kmj213vbn10k.c1rovcfhsccw.eu-west-2.rds.amazonaws.com",
+     host: "fm14lbfikbj76n6.c1rovcfhsccw.eu-west-2.rds.amazonaws.com",
      user: "dbadmin",
      password: "password",
      database: "ftratings"
@@ -19,9 +19,6 @@ con.connect(function(err){
 	if(err) throw err;
 });
 
-
-//var io = require('socket.io')(server);
-//var server = http.createServer(app);
 
 app.get('/',function(req,res){
      res.sendFile(path.join(__dirname,'index.html'));
@@ -49,7 +46,7 @@ app.post('/submit',function(req,res){
 
   res.sendFile(path.join(__dirname, '/Redirect.html'));
 
-   //res.end();
+
 
 
   });
@@ -58,35 +55,3 @@ app.post('/submit',function(req,res){
 app.listen(8080);
 
 
-
-//app.use(express.bodyParser());
-//app.post('/', function(req, res) {
-  //console.log(req.body)
-//});
-//app.post('/', function(req,res){
-//	var rating=req.body.name;
-//	connection.query("INSERT INTO ratings(ip,rating) VALUES ('a','1)")
-//}
-
-
-
-//function insertRating() {
-//	var mysql = require('mysql');
-//
-//	var con = mysql.createConnection({
-//	  host: "localhost",
-//	  user: "root",
-//	  password: "password",
-//	  database: "ftratings"
-//	});
-//
-//	con.connect(function(err) {
-//	  if (err) throw err;
-//	  console.log("Connected!");
-//	  var sql = "INSERT INTO ratings (ip, rating) VALUES ('a', 1)";
-//	  con.query(sql, function (err, result) {
-//	    if (err) throw err;
-//	    console.log("1 record inserted");
-//	  });
-//	});
-//}
