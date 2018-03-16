@@ -4,10 +4,10 @@
 
 ###### Included NodeJS modules: 
 
-**express**
-**mysql**
-**path**
-**body-parser**
+**express**,
+**mysql**,
+**path**,
+**body-parser**,
 
 ###### App originally runs on http port 8080 but an iptables rules was added to redirect traffic to port 80.
 ###### Tried to use HTTPS from the https://letsencrypt.org movement but Amazon Linux support was limited.
